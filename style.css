@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background-color: black;
+  color: white;
+}
+
+header li {
+  list-style: none;
+  padding: 0px 16px;
+}
+
+.header-list li {
+  float: left;
+}
+
+.top-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-wrapper h1 {
+  font-size: 60px;
+  letter-spacing: 6px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.top-wrapper a {
+  display: block;
+  border-radius: 6px;
+  padding: 4px;
+  text-decoration: none;
+  color: white;
+  margin-top: 18px;
+}
+
+.btn-instagram {
+  background-color: #e1306c;
+  color: white;
+}
+.btn-twitter {
+  background-color: black;
+  color: white;
+}
