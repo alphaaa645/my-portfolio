@@ -1,45 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP");
+
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 18px 24px;
   background-color: black;
   color: white;
+  z-index: 9999;
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 header li {
   list-style: none;
   padding: 0px 16px;
+  opacity: 0.8;
 }
 
-.header-list li {
-  float: left;
+.header-list ul {
+  display: flex;
+}
+
+.header-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-list li:hover {
+  background-color: #696969;
 }
 
 .top-wrapper {
+  width: auto;
+  margin: 0px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(./images/1745541799420.jpg);
+  background-position: bottom;
+  background-size: cover;
 }
 
 .top-wrapper h1 {
-  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 80px;
+  font-family: "Noto Serif JP", sans-serif;
+  color: white;
+  opacity: 0.7;
+  margin-top: 80px;
   letter-spacing: 6px;
+}
+
+.top-wrapper p {
+  color: white;
+  opacity: 0.7;
+  padding: 30px 0;
 }
 
 .button-wrapper {
   display: flex;
   justify-content: center;
   gap: 20px;
+  opacity: 0.8;
+  padding: 8px 24px;
 }
 
 .top-wrapper a {
-  display: block;
+  display: flex;
+  align-items: center;
   border-radius: 6px;
   padding: 4px;
   text-decoration: none;
   color: white;
-  margin-top: 18px;
+  gap: 6px;
 }
 
 .btn-instagram {
@@ -47,6 +88,164 @@ header li {
   color: white;
 }
 .btn-twitter {
+  background-color: black;
+  color: white;
+}
+
+.about {
+  margin: 0 auto;
+  padding: 80px 50px 0 50px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.about-title,
+.experience-title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Noto Serif JP", sans-serif;
+  border-bottom: 1px solid #333;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.about-profile {
+  display: flex;
+  background-color: rgba(225, 232, 238, 0.968);
+  padding: 12px 20px;
+  margin-top: 8px;
+}
+
+.left-side {
+  display: flex;
+  text-align: center;
+}
+
+.trim-image-to-circle {
+  background-image: url(./images/1723982043112.jpg);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: 125%;
+  background-repeat: no-repeat;
+  margin-top: 28px;
+}
+
+.right-side {
+  margin-left: 50px;
+}
+
+.furigana {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.my-name {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.explanation {
+  margin-top: 12px;
+}
+
+.about-detail {
+  margin-top: 40px;
+}
+
+.about-detail h3 {
+  font-size: 24px;
+  font-family: "Noto Serif JP", sans-serif;
+  margin-bottom: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+  width: 80px;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 100px;
+  margin: 28px 44px 0 44px;
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+.about-detail .question {
+  border-bottom: 1px solid #333;
+  width: 250px;
+  font-weight: bold;
+}
+
+.about-detail .answer {
+  padding-top: 10px;
+}
+
+.answer {
+  padding-bottom: 50px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.answer.visible {
+  opacity: 1;
+}
+.experience {
+  margin: 0 auto;
+  padding: 80px 50px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 42px 0;
+}
+
+.contents {
+  position: relative;
+  margin: 12px 32px 0 0;
+}
+
+.contents-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe4e1;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 1;
+}
+
+.contents-cover.unvisible {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.cover-hover {
+  background-color: #ffffff;
+}
+
+.contents img {
+  width: 90%;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
   background-color: black;
   color: white;
 }
